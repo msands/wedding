@@ -16,7 +16,7 @@
         <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin, class:"btn btn-xs btn-info" %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin), class:"btn btn-xs btn-warning" %></td>
-        <td><%= link_to 'Destroy', pin, class:"btn btn-xs btn-danger", method: :delete, data: { confirm: 'Last chance' } %></td>
+        <td><%= link_to 'Destroy', pin, class:"btn btn-xs btn-danger", method: :delete, data: { confirm: 'Destroy pin?' } %></td>
       </tr>
     <% end %>
   </tbody>
