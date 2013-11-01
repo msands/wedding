@@ -1,0 +1,27 @@
+<h1>Listing pins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pins.each do |pin| %>
+      <tr>
+        <td><%= pin.description %></td>
+        <td><%= link_to 'Show', pin, class:"btn btn-xs btn-info" %></td>
+        <td><%= link_to 'Edit', edit_pin_path(pin), class:"btn btn-xs btn-warning" %></td>
+        <td><%= link_to 'Destroy', pin, class:"btn btn-xs btn-danger", method: :delete, data: { confirm: 'Last chance' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pin', new_pin_path %>
