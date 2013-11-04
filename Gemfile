@@ -29,8 +29,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise', '~> 3.1.1'
 
 # Add paperclip gem for image upload
-
 gem 'paperclip', '~> 3.0'
+
+# Add Amazon Web Services - Software Development Kit...allows for user image upload
+gem 'aws-sdk', '~>1.20.0'
 
 # Adds the bootstrap gem [i.e. Twitter Bootstrap upcated from github]
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
