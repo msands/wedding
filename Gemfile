@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 1.2'
 # Add devise gem for user log in and authentication
 gem 'devise', '~> 3.1.1'
 
+# Add paperclip gem for image upload
+
+gem 'paperclip', '~> 3.0'
+
 # Adds the bootstrap gem [i.e. Twitter Bootstrap upcated from github]
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 
