@@ -2,14 +2,18 @@
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
       <%= image_tag pin.image.url(:medium) %>
+      <%= link_to image_tag(pin.image.url(:medium)), pin %>
       <div class="panel-body">
-        <%= pin.description %>
-        <%= pin.user.email if pin.user %>
-        <%= link_to 'Show', pin, class:"btn btn-xs btn-info" %>
+        <p><%= pin.description %></p>
+        <strong><%= pin.user.email if pin.user %></strong>
+        
         <% if pin.user == current_user %>
-          <%= link_to 'Edit', edit_pin_path(pin), class:"btn btn-xs btn-warning" %>
-          <%= link_to 'Destroy', pin, class:"btn btn-xs btn-danger", method: :delete, data: { confirm: 'Delete post?' } %>
+          <div class="actions">
+            <%= link_to 'Edit', edit_pin_path(pin), class:"btn btn-xs btn-warning" %>
+            <%= link_to 'Destroy', pin, class:"btn btn-xs btn-danger", method: :delete, data: { confirm: 'Delete post?' } %>
+          </div>
         <% end %>
+        
       </div>
     </div>
   <% end %>
