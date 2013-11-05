@@ -17,3 +17,6 @@
 
 # Ignore all redcar files
 .redcar/*
+
+# Ignore files in the public system folder that locally holds images
+/public/system/*
