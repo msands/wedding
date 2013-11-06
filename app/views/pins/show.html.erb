@@ -11,9 +11,8 @@
         <p><strong><%= @pin.user.email if @pin.user %></strong>
     
         <% if @pin.user == current_user %>
-         <%= link_to edit_pin_path(@pin) %>
-          <span class="glyphicon glyphicon-edit"></span>
-            Edit
+          <%= link_to edit_pin_path(@pin) %>
+            <span class="glyphicon glyphicon-edit"></span>Edit
           <% end %>
         <% end %>
         
