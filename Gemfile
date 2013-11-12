@@ -35,13 +35,19 @@ gem 'devise', '~> 3.1.1'
 gem 'paperclip', '~> 3.0'
 
 # Add Amazon Web Services - Software Development Kit...allows for user image upload
-gem 'aws-sdk', '~>1.20.0'
+gem 'aws-sdk', '~> 1.20.0'
 
 # Add jQuery Masonry Gem - enables cascading grid layout
 gem 'masonry-rails', '~> 0.2.0'
 
 # Adds the bootstrap gem [i.e. Twitter Bootstrap upcated from github]
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+
+# Add will_paginate gem for pagination
+gem 'will_paginate', '~> 3.0'
+
+# Add will_paginate-bootstrap gem for fancy buttons
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
