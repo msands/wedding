@@ -1,5 +1,7 @@
 Wedding::Application.routes.draw do
-  resources :pins
+  resources :pins do
+    resources :comments
+  end
 
   devise_for :users
   root "pins#index"

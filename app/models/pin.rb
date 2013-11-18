@@ -5,4 +5,6 @@ class Pin < ActiveRecord::Base
   
   validates :image, presence: true
   validates :description, presence: true
+
+  has_many :comments, as: :commentable
 end
