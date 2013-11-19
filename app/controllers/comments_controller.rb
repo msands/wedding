@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  
   def index
     @commentable = Pin.find(params[:pin_id])
     @comments = @commentable.comments
