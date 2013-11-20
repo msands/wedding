@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
   def create
     @commentable = Pin.find(params[:pin_id])
     @comment = @commentable.comments.new(comment_params)
+    @comment.user = current_user
     if @comment.save
       redirect_to @commentable, notice: "Comment posted."
     else
