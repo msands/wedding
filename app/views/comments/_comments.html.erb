@@ -1,10 +1,10 @@
 <div id="comments">
   <% @comments.each do |comment| %>
     <div class="comment">
-      <%= simple_format comment.content %>
       <% if comment.user.present? %>
-        <%= comment.user.name %>
+      <strong><%= comment.user.name %></strong>
       <% end %>
+      <%= simple_format comment.content %>
     </div>
   <% end %>
 </div>
