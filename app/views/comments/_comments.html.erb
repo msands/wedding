@@ -2,7 +2,7 @@
   <% @comments.each do |comment| %>
     <div class="comment">
       <% if comment.user.present? %>
-      <strong><%= comment.user.name %></strong>
+      <i><strong><%= comment.user.name %></strong></i>
       <% end %>
       <%= simple_format comment.content %>
     </div>
