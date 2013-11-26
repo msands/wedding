@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require 'masonry/transitions'
+ *= require jquery.fancybox.css
  *= require_tree .
  */
