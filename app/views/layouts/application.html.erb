@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Wedding Website for Marcel and Kim">
+    <meta name="keywords" content="Marcel,Kim,Wedding">
+    <meta name="author" content="Marcel Sands">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
     <title>Marcel & Kim Wedding</title>
@@ -13,7 +14,7 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.css" rel="stylesheet">
+    <!--<link href="../../dist/css/bootstrap.css" rel="stylesheet"> -->
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -25,7 +26,7 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+    <!--<link href="carousel.css" rel="stylesheet"> -->
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -47,7 +48,7 @@
           <%= image_tag("https://s3.amazonaws.com/marcelandkim/wedding/delavant_crop.png") %>
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
+              <h1>Del'Avant Event Center</h1>
               <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
               <p>
                 <%= link_to "Log in", new_user_session_path, class: "btn btn-success btn-lg" %>
@@ -80,8 +81,6 @@
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
-
-
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -153,8 +152,8 @@
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
-
-
+      
+      
       <!-- FOOTER -->
       <%= render 'layouts/footer' %>
 
@@ -165,7 +164,5 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../docs-assets/js/holder.js"></script>
   </body>
 </html>
