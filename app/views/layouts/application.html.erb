@@ -45,11 +45,11 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">
+          <%= image_tag("https://s3.amazonaws.com/marcelandkim/wedding/couple1.jpg") %>
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Welcome to our page</h1>
+              <p></p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             </div>
           </div>
@@ -59,11 +59,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Del'Avant Event Center</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p>
-                <%= link_to "Log in", new_user_session_path, class: "btn btn-success btn-lg" %>
-                <%= link_to "Sign up", new_user_registration_path, class: "btn btn-info btn-lg" %>
-              </p>
+              <p>Event center information</p>
             </div>
           </div>
         </div>
@@ -89,12 +85,35 @@
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+      <div class="row"><a id="about"></a>
         <div class="col-lg-4">
           <img class="img-circle" src="https://s3.amazonaws.com/marcelandkim/wedding/abt-him-crop.jpg" alt="About Him" height="140" width="140">
           <h2>About Him</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>
+            <!-- Button trigger modal -->
+            <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
+              Launch demo modal
+            </button>
+          </p>
+      <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="https://s3.amazonaws.com/marcelandkim/wedding/abt-us.jpg" alt="About Them" height="140" width="140">
@@ -159,10 +178,5 @@
 
     </div><!-- /.container -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   </body>
 </html>
