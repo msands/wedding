@@ -3,9 +3,11 @@
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
+      
     <div class="panel-heading center">
       <%= image_tag @pin.image.url(:medium) %>
     </div>
+    
     <div class="panel-body">    
       <p><%= @pin.description %></p>
       <p><strong><%= @pin.user.name if @pin.user %></strong>
