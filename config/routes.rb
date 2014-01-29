@@ -4,7 +4,7 @@ Wedding::Application.routes.draw do
   end
 
   devise_for :users
-  root "pins#index"
+  root "pages#index"
   get "about" => "pages#about" ## creates about_path
   get "party" => "pages#party" ## creates party_path
 
