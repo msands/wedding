@@ -15,13 +15,12 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><%= link_to "About", '#about' %></li>
+            <li><a href="#">RSVP</a></li>
             <li><a href="#contact">Contact</a></li>
             <% if user_signed_in? %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Settings <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">RSVP</a></li>
                 <li><%= link_to 'View Pins', pins_path %></li>
                 <li>
                   <%= link_to new_pin_path do %>
