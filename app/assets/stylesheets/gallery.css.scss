@@ -1,0 +1,132 @@
+/*----------------------------------------------------------------------------------- */
+/*  Widget-Container */
+/*----------------------------------------------------------------------------------- */
+.widget-container {
+  min-height: 320px;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .widget-container.fluid-height {
+    height: auto;
+    min-height: 0; }
+  .widget-container.small {
+    min-height: 120px;
+    height: 200px; }
+  .widget-container.gallery {
+    min-height: 400px; }
+  .widget-container .heading {
+    background: rgba(255, 255, 255, 0.94);
+    height: 50px;
+    padding: 15px 15px;
+    color: #007aff;
+    font-size: 15px;
+    width: 100%;
+    font-weight: 400;
+    margin: 0; }
+    .widget-container .heading [class^="fa"], .widget-container .heading [class*="fa"] {
+      margin-right: 10px;
+      font-size: 14px; }
+      .widget-container .heading [class^="fa"].pull-right, .widget-container .heading [class*="fa"].pull-right {
+        margin-right: 0px;
+        margin-left: 15px;
+        opacity: 0.35;
+        font-size: 1.1em; }
+      .widget-container .heading [class^="fa"]:hover, .widget-container .heading [class*="fa"]:hover {
+        cursor: pointer;
+        opacity: 1; }
+  .widget-container .tabs {
+    background: whitesmoke;
+    border-bottom: 1px solid #dddddd; }
+  .widget-container .widget-content {
+    width: 100%; }
+  .widget-container.scrollable {
+    position: relative;
+    height: 400px;
+    padding-top: 50px; }
+    .widget-container.scrollable.chat-home {
+      height: 427px; }
+    .widget-container.scrollable .heading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10; }
+    .widget-container.scrollable .shadow {
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1); }
+    .widget-container.scrollable .widget-content {
+      height: 100%;
+      position: relative;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch; }
+
+.padded {
+  padding: 15px; }
+  
+/*----------------------------------------------------------------------------------- */
+/*  Gallery with Captions */
+/*----------------------------------------------------------------------------------- */
+.gallery-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .gallery-grid li {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    position: relative; }
+    .gallery-grid li figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden; }
+      .gallery-grid li figure img {
+        max-width: 100%;
+        display: block;
+        position: relative;
+        top: 0;
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        transition: all 0.25s; }
+    .gallery-grid li .caption {
+      width: 100%;
+      height: 90px;
+      position: absolute;
+      bottom: -90px;
+      left: 0px;
+      padding: 15px 20px 20px;
+      background: black;
+      color: white;
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      transition: all 0.25s; }
+      .gallery-grid li .caption h3 {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-weight: 100; }
+      .gallery-grid li .caption span {
+        margin-top: 5px;
+        display: inline-block; }
+      .gallery-grid li .caption a {
+        margin: 0 0 0 15px;
+        border: 1px solid white; }
+    .gallery-grid li:hover figure img {
+      top: -50px; }
+    .gallery-grid li:hover .caption {
+      bottom: 0px; }
+
+@media (max-width: 1200px) {
+  .gallery-grid li {
+    width: 33.33%; } }
+@media (max-width: 900px) {
+  .gallery-grid li {
+    width: 50%; } }
+@media (max-width: 600px) {
+  .gallery-grid li {
+    width: 100%;
+    margin: 0 0 15px; } }
+    
+/*----------------------------------------------------------------------------------- */
+/*  Grid Structure */
+/*----------------------------------------------------------------------------------- */
+.grid-structure .row .widget-container {
+  color: #999999;
+  padding: 10px 15px 12px;
+  min-height: 0; }
