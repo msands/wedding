@@ -19,7 +19,7 @@
             <li><a href="#contact">Contact</a></li>
             <% if user_signed_in? %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Settings <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">RSVP</a></li>
                 <li><%= link_to 'View Pins', pins_path %></li>
@@ -30,8 +30,16 @@
                 </li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Account</li>
-                <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-                <li><%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
+                <li>
+                  <%= link_to edit_user_registration_path do %>
+                    <span class="glyphicon glyphicon-cog"></span> Account Settings
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                    <span class="glyphicon glyphicon-log-out"></span> Log Out
+                  <% end %>
+                </li>
               </ul>
             </li>
             <% else %>

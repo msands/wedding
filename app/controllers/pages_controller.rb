@@ -7,4 +7,7 @@ class PagesController < ApplicationController
   
   def party
   end
+  
+  def index
+  end
 end
