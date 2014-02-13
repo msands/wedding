@@ -1,8 +1,10 @@
 Wedding::Application.routes.draw do
-  get "rsvp/new"
+
   resources :pins do
     resources :comments
   end
+  
+  resources :rsvp, except: [:destroy, :show]
 
   devise_for :users
   root "pages#index"
