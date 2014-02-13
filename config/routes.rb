@@ -11,7 +11,6 @@ Wedding::Application.routes.draw do
   get "contact" => "pages#contact" ## creates contact_path
   get "venue" => "pages#venue" ## creates venue_path
   get "hotels" => "pages#hotels" ## creates hotel_path
-  get "rsvp" => "pages#rsvp" ## creates rsvp_path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
