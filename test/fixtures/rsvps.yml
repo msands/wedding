@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  guest_name: MyString
+  menu_option: false
+  guest_note: MyText
+
+two:
+  guest_name: MyString
+  menu_option: false
+  guest_note: MyText
