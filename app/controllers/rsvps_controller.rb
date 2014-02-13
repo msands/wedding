@@ -1,4 +1,4 @@
-class RsvpController < ApplicationController
+class RsvpsController < ApplicationController
   
   def new
     @rsvp = Rsvp.new
@@ -7,9 +7,10 @@ class RsvpController < ApplicationController
   def create
     @rsvp = Rsvp.new(params[:new])
     if @rsvp.save
-      redirect_to @rsvp, notice: "RSVP sent"
+      redirect_to root_path, notice: 'RSVP Sent. See you soon!!!'
     else
       render action: 'new'
     end
   end
+  
 end

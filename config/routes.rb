@@ -4,7 +4,7 @@ Wedding::Application.routes.draw do
     resources :comments
   end
   
-  resources :rsvp, except: [:destroy, :show]
+  resources :rsvps, except: [:destroy, :show]
 
   devise_for :users
   root "pages#index"

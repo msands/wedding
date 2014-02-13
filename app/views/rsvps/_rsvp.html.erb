@@ -1,5 +1,5 @@
 
-<%= form_for :rsvp do |f| %>
+<%= form_for @rsvp do |f| %>
   
   <div class="form-group">
     <%= f.label :guest_name %><br>
@@ -7,9 +7,9 @@
   </div>
   
   <div class="form-group">
-    <%= f.label :chicken %> <%= f.radio_button :menu_option, 'chicken' %><br>
-    <%= f.label :fish %> <%= f.radio_button :menu_option, 'fish' %><br>
-    <%= f.label :vegetarian %> <%= f.radio_button :menu_option, 'vegetarian' %><br>
+    <%= f.radio_button :menu_option, 'chicken' %> <%= f.label :chicken %><br>
+    <%= f.radio_button :menu_option, 'fish' %> <%= f.label :fish %><br>
+    <%= f.radio_button :menu_option, 'vegetarian' %> <%= f.label :vegetarian %><br>
   </div>
   
   <div class="form-group">
