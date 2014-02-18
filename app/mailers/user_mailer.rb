@@ -1,8 +1,8 @@
 class UserMailer < ActionMailer::Base
   default from: "marcelandkim@marcelandkim.com"
 
-  def rsvp_confirmation(user)
-    @user = user
+  def rsvp_confirmation(rsvp)
+    @rsvp = rsvp
 
     mail to: "marcelandkim2014@gmail.com", subject: "RSVP Confirmation"
   end

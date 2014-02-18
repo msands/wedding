@@ -7,7 +7,7 @@ class RsvpsController < ApplicationController
   def create
     @rsvp = Rsvp.new(params[:new])
     if @rsvp.save
-      UserMailer.rsvp_confirmation(@user).deliver
+      UserMailer.rsvp_confirmation(@rsvp).deliver
       redirect_to root_path, notice: 'RSVP Sent! See you soon!!!'
     else
       render action: 'new'
