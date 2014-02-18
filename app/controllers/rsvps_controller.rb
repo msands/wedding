@@ -5,7 +5,7 @@ class RsvpsController < ApplicationController
   end
   
   def create
-    @rsvp = Rsvp.new(params[:new])
+    @rsvp = Rsvp.new(rsvp_params)
     if @rsvp.save
       UserMailer.rsvp_confirmation(@rsvp).deliver
       redirect_to root_path, notice: 'RSVP Sent! See you soon!!!'
@@ -13,5 +13,11 @@ class RsvpsController < ApplicationController
       render action: 'new'
     end
   end
+  
+  private
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def rsvp_params
+      params.require(:rsvp).permit(:guest_name, :guest_attending, :menu_option, :guest_note)
+    end
   
 end
