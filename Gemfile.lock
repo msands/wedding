@@ -82,6 +82,7 @@ GEM
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.1)
+    nested_form (0.3.2)
     nokogiri (1.5.10)
     orm_adapter (0.4.0)
     paperclip (3.5.2)
@@ -170,6 +171,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   masonry-rails (~> 0.2.0)
+  nested_form
   paperclip (~> 3.0)
   pg
   pry

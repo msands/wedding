@@ -49,6 +49,9 @@ gem 'will_paginate', '~> 3.0'
 # Add will_paginate-bootstrap gem for fancy buttons
 gem 'will_paginate-bootstrap'
 
+# Use nested_form gem for handle multiple models in a single form
+gem 'nested_form'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
