@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220042631) do
+ActiveRecord::Schema.define(version: 20140220200302) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
@@ -46,8 +46,6 @@ ActiveRecord::Schema.define(version: 20140220042631) do
 
   create_table "rsvps", force: true do |t|
     t.boolean  "guest_attending"
-    t.string   "guest_name"
-    t.string   "menu_option"
     t.text     "guest_note"
     t.datetime "created_at"
     t.datetime "updated_at"

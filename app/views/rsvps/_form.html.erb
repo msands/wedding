@@ -2,32 +2,32 @@
 <%= nested_form_for @rsvp do |f| %>
 
   <div class="form-group">
-    <%= f.radio_button :guest_attending, 'true' %> <%= f.label :Joyfully_Accept %> </br>
-    <%= f.radio_button :guest_attending, 'false' %> <%= f.label :Regretfully_Decline %>
+    <%= f.radio_button :guest_attending, 'true' %> <%= f.label "Joyfully Accept" %> </br>
+    <%= f.radio_button :guest_attending, 'false' %> <%= f.label "Regretfully Decline" %>
   </div>
   
   <div class="form-group">
     <%= f.label :guest_name %><br>
     <%= f.text_field :guest_name, class: "form-control" %><br>
-    <%= f.radio_button :menu_option, 'chicken' %> <%= f.label :chicken %> |
-    <%= f.radio_button :menu_option, 'fish' %> <%= f.label :fish %> |
-    <%= f.radio_button :menu_option, 'vegetarian' %> <%= f.label :vegetarian %>
+    <%= f.radio_button :menu_option, 'chicken' %> <%= f.label "chicken" %> |
+    <%= f.radio_button :menu_option, 'fish' %> <%= f.label "fish" %> |
+    <%= f.radio_button :menu_option, 'vegetarian' %> <%= f.label "vegetarian" %>
   </div>    
 
   <div class="form-group">
   <%= f.fields_for :guests do |g| %>
     <%= g.label :guest_name %><br>
     <%= g.text_field :guest_name, class: "form-control" %><br>
-    <%= g.radio_button :menu_option, 'chicken' %> <%= f.label :chicken %> |
-    <%= g.radio_button :menu_option, 'fish' %> <%= f.label :fish %> |
-    <%= g.radio_button :menu_option, 'vegetarian' %> <%= f.label :vegetarian %> |
-    <%= g.radio_button :menu_option, 'kids' %> <%= f.label :kids %>
+    <%= g.radio_button :menu_option, 'chicken' %> <%= f.label "chicken" %> |
+    <%= g.radio_button :menu_option, 'fish' %> <%= f.label "fish" %> |
+    <%= g.radio_button :menu_option, 'vegetarian' %> <%= f.label "vegetarian" %> |
+    <%= g.radio_button :menu_option, 'kids' %> <%= f.label "kids" %>
   <% end %>
   <%= f.link_to_add "Add a guest", :guests %>
   </div>
 
   <div class="form-group">
-    <%= f.label :leave_a_note %><br>
+    <%= f.label "Leave a note:" %><br>
     <%= f.text_area :guest_note, class: "form-control" %>
   </div>
   
