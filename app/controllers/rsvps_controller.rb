@@ -17,7 +17,7 @@ class RsvpsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def rsvp_params
-      params.require(:rsvp).permit(:guest_name, :guest_attending, :menu_option, :guest_note)
+      params.require(:rsvp).permit(:guest_attending, :guest_note, :guest_name, :menu_option)
     end
   
 end

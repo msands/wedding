@@ -1,4 +1,6 @@
 class Rsvp < ActiveRecord::Base
-  validates :guest_name, :menu_option, presence: true
+  has_many :guests
+  
+  accepts_nested_attributes_for :guests
   
 end
