@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140213015003) do
+ActiveRecord::Schema.define(version: 20140220042631) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20140213015003) do
   end
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
+
+  create_table "guests", force: true do |t|
+    t.string   "guest_name"
+    t.string   "menu_option"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pins", force: true do |t|
     t.string   "description"
