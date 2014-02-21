@@ -29,7 +29,6 @@ Wedding::Application.configure do
   
   # Needed for mailcatcher
   config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = { :address => "smtp://127.0.0.1:1025" }
   config.action_mailer.smtp_settings = {
     :address              => "127.0.0.1",
     :port                 => 1025,
@@ -40,4 +39,5 @@ Wedding::Application.configure do
   
   # Required for Heroku
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
 end

@@ -6,8 +6,9 @@ Thank you for your RSVP
 <%= @rsvp.menu_option %>
 
 <% @rsvp.guests.each do |guest| %>
-  <%= @guest.guest_name %>
-  <%= @guest.menu_option %>
+  <%= guest.guest_name %>
+  <%= guest.menu_option %>
+  
 <% end %>
 
 <%= @rsvp.guest_note %>
