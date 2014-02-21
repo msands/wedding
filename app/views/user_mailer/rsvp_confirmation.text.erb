@@ -5,7 +5,12 @@ Thank you for your RSVP
 <%= @rsvp.guest_name %>
 <%= @rsvp.menu_option %>
 
-<%= @rsvp.guest_note%>
+<% @rsvp.guests.each do |guest| %>
+  <%= @guest.guest_name %>
+  <%= @guest.menu_option %>
+<% end %>
+
+<%= @rsvp.guest_note %>
 
 
 We look forward to seeing you on May 25th.
