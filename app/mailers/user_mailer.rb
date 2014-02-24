@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def rsvp_confirmation(rsvp)
     @rsvp = rsvp
 
-    mail to: "user.email",
+    mail to: "<% user.email %>",
       cc: "marcelandkim2014@gmail.com", 
       subject: "RSVP Confirmation"
   end
