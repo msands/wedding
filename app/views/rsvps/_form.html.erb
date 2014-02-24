@@ -7,6 +7,11 @@
   </div>
   
   <div class="form-group">
+    <%= f.label "Email Address" %><br>
+    <%= f.text_field :guest_email, class: "form-control" %>
+  </div>
+  
+  <div class="form-group">
     <%= f.label :guest_name %><br>
     <%= f.text_field :guest_name, class: "form-control" %><br>
     <%= f.radio_button :menu_option, 'chicken' %> <%= f.label "chicken" %> |
@@ -23,7 +28,7 @@
     <%= g.radio_button :menu_option, 'vegetarian' %> <%= f.label "vegetarian" %> |
     <%= g.radio_button :menu_option, 'kids' %> <%= f.label "kids" %>
   <% end %>
-  <%= f.link_to_add "Add a guest", :guests %>
+  <%= f.link_to_add "Add a guest", :guests, class: "btn btn-success" %>
   </div>
 
   <div class="form-group">
