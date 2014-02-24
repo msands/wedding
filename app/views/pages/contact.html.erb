@@ -12,39 +12,10 @@
             <p>
               Groom
             </p>
-            <em><span class="glyphicon glyphicon-envelope"></span> <%= link_to "email", "mailto:marcel.sands84@gmail.com" %></em>
-          </div>
-        </div>
-        <div class="profile-stats">
-          <div class="col-xs-4">
-            <a href="#">
-              <h2>
-                245
-              </h2>
-            </a>
-            <p>
-              Posts
-            </p>
-          </div>
-          <div class="col-xs-4">
-            <a href="#">
-              <h2>
-                150
-              </h2>
-            </a>
-            <p>
-              Friends
-            </p>
-          </div>
-          <div class="col-xs-4">
-            <a href="#">
-              <h2>
-                12
-              </h2>
-            </a>
-            <p>
-              Videos
-            </p>
+            <em><span class="glyphicon glyphicon-envelope"></span> <%= link_to "email", "mailto:marcel.sands84@gmail.com" %></em><br>
+            <% if user_signed_in? %>
+              <em><span class="glyphicon glyphicon-earphone"></span> 404.429.9690 </em>
+            <% end %>
           </div>
         </div>
       </div>
@@ -65,39 +36,10 @@
             <p>
               Bride
             </p>
-            <em><span class="glyphicon glyphicon-envelope"></span> <%= link_to "email", "mailto:kimberlyjames18@gmail.com" %></em>
-          </div>
-        </div>
-        <div class="profile-stats">
-          <div class="col-xs-4">
-            <a href="#">
-              <h2>
-                245
-              </h2>
-            </a>
-            <p>
-              Posts
-            </p>
-          </div>
-          <div class="col-xs-4">
-            <a href="#">
-              <h2>
-                150
-              </h2>
-            </a>
-            <p>
-              Friends
-            </p>
-          </div>
-          <div class="col-xs-4">
-            <a href="#">
-              <h2>
-                12
-              </h2>
-            </a>
-            <p>
-              Videos
-            </p>
+            <em><span class="glyphicon glyphicon-envelope"></span> <%= link_to "email", "mailto:kimberlyjames18@gmail.com" %></em><br>
+            <% if user_signed_in? %>
+              <em><span class="glyphicon glyphicon-earphone"></span> 404.457.8847 </em>
+            <% end %>
           </div>
         </div>
       </div>
