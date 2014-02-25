@@ -115,8 +115,10 @@
 
   <div class="row featurette">
     <div class="col-md-5">
-    <%= image_tag Pin.last.image, width:'80%', height: '80%' %>
-      <!--<img class="featurette-image img-responsive" src="https://s3.amazonaws.com/marcelandkim/wedding/pin-upload.png" alt="User Pins"> -->
+      <%=link_to pins_path do %>
+        <%= image_tag Pin.last.image, width:'80%', height: '80%' %>
+        <!--<img class="featurette-image img-responsive" src="https://s3.amazonaws.com/marcelandkim/wedding/pin-upload.png" alt="User Pins"> -->
+      <% end %>
     </div>
     <div class="col-md-7">
             <h2 class="featurette-heading">User Photo <span class="text-muted"> <%= link_to "Upload", new_pin_path %> </span></h2>
