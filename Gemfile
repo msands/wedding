@@ -41,7 +41,7 @@ gem 'aws-sdk', '~> 1.20.0'
 gem 'masonry-rails', '~> 0.2.0'
 
 # Adds the bootstrap gem [i.e. Twitter Bootstrap upcated from github]
-gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 # Add will_paginate gem for pagination
 gem 'will_paginate', '~> 3.0'
