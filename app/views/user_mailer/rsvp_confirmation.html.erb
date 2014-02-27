@@ -5,123 +5,156 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <title>Marcel and Kim Wedding RSVP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Unna' rel='stylesheet' type='text/css' />
   </head>
 
-  <body style="margin: 0; padding: 0;">
-    <table border="1" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
-      
+  <body style="center margin: 0; padding: 0;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <td align="center" bgcolor="#2ecc71" style="padding-top: 40px; padding-right: 0; padding-bottom: 30px; padding-left: 0; ">
-          <img class="img-circle" src="https://s3.amazonaws.com/marcelandkim/wedding/abt-us.jpg" alt="RSVP" height="250" width="250" style="display: block;" />
-        </td>
-      </tr>
-      
-      <tr>
-        <td bgcolor="#bdc3c7">
-          <table border="1" cellpadding="0" cellspacing="0" width="100%">
-          
+        <td style="padding-top: 0; padding-right: 0; padding-bottom: 30px; padding-left: 0;">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
+            <!-- Row 1 -->
             <tr>
-              <td>
-                Thank you for your RSVP!!!
+              <td align="center" bgcolor="#2ecc71" style="padding-top: 40px; padding-right: 0; padding-bottom: 30px; padding-left: 0; ">
+                <img src="https://s3.amazonaws.com/marcelandkim/icons/marcel-rsvp.png" alt="RSVP for Kim and Marcel Wedding" width="514" height="230" style="display: block;" />
               </td>
             </tr>
               
+            <!-- Row 2 -->
             <tr>
-              <td style="padding-top: 20px; padding-right: 0; padding-bottom: 30px; padding-left: 0;">
-                Del'Avant Event Center Information<br/>
-                Address<br/>
-                link to direction<br/>
-                maybe add a nice pic of the venue, possibly to the right side<br/>
-              </td>
-            </tr>
-              
-            <tr>
-              <td>
-                <table border="1" cellpadding="0" cellspacing="0" width="100%">
+              <td bgcolor="#ecf0f1" style="padding-top: 40px; padding-right: 30px; padding-bottom: 40px; padding-left: 30px;">
+                    
+                <!-- Second table -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
-                    <td width="260" valign="top">
-                      <table border="1" cellpadding="0" cellspacing="0" width="100%">
+                    <td style="color: #153643; font-family: 'Bad Script', cursive; font-size: 24px">
+                      <b>Thank you for your RSVP!!!</b>
+                    </td>
+                  </tr>
+                        
+                  <tr>
+                    <td>
+                            
+                      <!-- Third table: will handle the venue discription and maps image -->
+                      <table style="padding-top: 20px; padding-right: 0; padding-bottom: 30px; padding-left: 0; font-family: 'Unna', serif; font-size: 16px; line-height: 20px;">
                         <tr>
-                          <td>
-                            <!-- <img src="images/right.gif" alt="" width="100%" height="140" style="display: block;" /> -->
-                            CLIPART IMAGE HERE FOR GUESTS
+                          <td width="260">
+                            Del'Avant Event Center<br/>
+                            141 Main Street<br/>
+                            LaGrange, GA 30240<br/>
                           </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 25px 0 0 0;">
-                            THIS SECIONS WILL HAVE THE LIST OF THE GUEST NAMES AS WELL AS THEIR MENU SELECTIONS
+                                      
+                          <td style="font-size: 0; line-height: 0;" width="20">
+                            &nbsp;
+                          </td>
+                                        
+                          <td align="center" width="260">
+                            <img src="https://s3.amazonaws.com/marcelandkim/icons/calendar-new-date.png" alt="May 25, 2014" width="140" height="140" /> 
+                            <!-- <img src="https://s3.amazonaws.com/marcelandkim/icons/delavant-map-small.png" alt="141 Main St, LaGrange, GA 30240" /> -->
                           </td>
                         </tr>
                       </table>
+                      <!-- End third table -->
+                            
                     </td>
-                    
-                    <!-- THIS BLOCK OF CODE IS JUST TO ADD A BLANK COLUMN TO HELP ADJUST FOR SPACING -->
-                    <td style="font-size: 0; line-height: 0;" width="20">
-                      &nbsp;
-                    </td>
-                    <!-- END BLANK COLUMN FOR SPACING -->
-                    
-                    <td width="260" valign="top">
-                      <table border="1" cellpadding="0" cellspacing="0" width="100%">
+                  </tr>
+                  <tr>
+                    <td>
+                              
+                      <!-- Fourth table for guest name info and our contact info -->
+                      <table border="0" cellpadding="0" cellspacing="0">
                         <tr>
                           <td>
-                            <!-- <img src="images/right.gif" alt="" width="100%" height="140" style="display: block;" /> -->
-                            CLIPART IMAGE FOR CONTACT INFORMATION FOR ME AND KIM
+                            <img src="https://s3.amazonaws.com/marcelandkim/icons/letterhead.png" alt="" width="100%" height="140" style="display: block;" />
+                          </td>
+                                    
+                          <td style="font-size: 0; line-height: 0;" width="20">
+                            &nbsp;
+                          </td>
+                                    
+                          <td>
+                            <img src="https://s3.amazonaws.com/marcelandkim/icons/clipboard.png" alt="" width="100%" height="140" style="display: block;" />
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding: 25px 0 0 0;">
-                            THIS IS WHERE THE ACTUAL CONTACT INFORMATION WILL BE: EMAIL ADDRESS, PHONE NUMBER, ETC.
+                          <td style="font-family: 'Unna', serif; font-size: 16px; line-height: 20px;">
+                            <p>
+                              Will <%= @rsvp.guest_name %> be attending? - <%= @rsvp.guest_attending %><br/>
+                              What would you like to eat? - <%= @rsvp.menu_option %>
+                            </p>
+                            
+                            <p>Who will be accompanying you on this glorious day?</p>
+                            <% @rsvp.guests.each do |guest| %>
+                              <%= guest.guest_name %> would like a <%= guest.menu_option %> plate<p/>
+                                        
+                            <% end %>
+                            Anything else?<br/>
+                            <%= @rsvp.guest_note %>
+                          </td>
+                                    
+                          <td style="font-size: 0; line-height: 0;" width="20">
+                            &nbsp;
+                          </td>
+                                      
+                          <td style="font-family: 'Unna', serif; font-size: 16px; line-height: 20px;">
+                            Have any questions or concerns?<br/>
+                            <a href="mail to:marcelandkim2014@gmail.com">Email Us!!!</a><br/>
+                            <p>Need to contact us individually?<p/>
+                            Marcel &brvbar; 404-429-9690<br/>
+                            <a href="mail to:marcel.sands84@gmail.com">marcel.sands84@gmail.com</a></p>
+                            Kim &brvbar; 404-457-8847<br/>
+                            <a href="mail to:kimberlyjames18@gmail.com">kimberlyjames18@gmail.com</a></p>                              
                           </td>
                         </tr>
                       </table>
+                      <!-- end fourth table -->
+                              
                     </td>
                   </tr>
                 </table>
-              </td>
-            </tr>
+                <!-- End second table -->
           
-          </table>
-        </td>
-      </tr>
-      
-      <tr>
-        <td bgcolor="#2980b9" style="padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
-          <table border="1" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-              <td>
-                THIS WILL BE WHERE WE TELL THEM ABOUT OUR REGISTRY
               </td>
-              
-              <td align="right">
-                <table border="0" cellpadding="0" cellspacing="0">
+            </tr>
+                
+            <!-- Row 3 -->
+            <tr>
+              <td bgcolor="#2980b9" style="padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px;">
+                    
+                <!-- fith table for registry and images -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
-                    <td>
-                      <a href="http://www.twitter.com/">
-                        <img src="images/tw.gif" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
-                      </a>
+                    <td style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;" width="75%">
+                      Please check out our wedding registries at<br/>
+                      <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&amp;eventType=Wedding&amp;registryId=10704700&amp;pwsurl=" target="_blank">Bed, Bath &amp; Beyond</a> 
+                      and <a href="http://www.amazon.com/gp/registry/wedding/227THRXJTJ7UO/ref=cm_sw_em_r_wrl_cEL.sb1374Q4M_wb" target="_blank">Amazon.com</a>.
                     </td>
-                    
-                    <!-- THIS BLOCK OF CODE IS JUST TO ADD A BLANK COLUMN TO HELP ADJUST FOR SPACING -->
-                    <td style="font-size: 0; line-height: 0;" width="20">
-                      &nbsp;
+                    <td align="right" width="25%">
+                      <!-- sith table for registry images -->
+                      <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <img src="https://s3.amazonaws.com/marcelandkim/wedding/bbb.png" alt="Bed, Bath &amp; Beyond" width="87" height="38" style="display: block;" border="0" />
+                          </td>
+                                      
+                          <td>
+                            <img src="https://s3.amazonaws.com/marcelandkim/icons/amazonwishlist-64-black.png" alt="Amazon.com Wedding Registry" width="38" height="38" style="display: block;" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- end sixth table -->
                     </td>
-                    <!-- END BLANK COLUMN FOR SPACING --> 
-                    
-                    <td>
-                      <a href="http://www.twitter.com/">
-                        <img src="images/fb.gif" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
-                      </a>
-                    </td>                    
                   </tr>
                 </table>
+                <!-- end fifth table -->
+                
               </td>
-              
             </tr>
+              
           </table>
         </td>
       </tr>
-      
     </table>
   </body>
 
