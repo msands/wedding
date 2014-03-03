@@ -1,6 +1,6 @@
   
-
-  <div id="pins" class="transitions-enabled">
+<div id="masonry-container" class="transitions-enabled">
+  <div id="pins">
     <% @pins.each do |pin| %>
       <div class="box panel panel-default">
         <%= link_to image_tag(pin.image.url(:thumb)), pin %>
@@ -29,3 +29,4 @@
   <div class="center">
     <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
   </div>
+</div>
