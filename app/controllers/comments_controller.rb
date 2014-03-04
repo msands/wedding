@@ -16,6 +16,7 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
+      UserMailer.comment_notification(@user).deliver
       redirect_to @commentable, notice: "Comment posted."
     else
       render :new
@@ -26,6 +27,6 @@ class CommentsController < ApplicationController
   
       # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:content)
+      params.require(:comment).permit(:content, users_attributes:[:email])
     end
 end
