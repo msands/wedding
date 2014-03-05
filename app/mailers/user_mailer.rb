@@ -15,7 +15,8 @@ class UserMailer < ActionMailer::Base
     mail to: "to@example.org"
   end
 
-  def comment_notification(user)
+  def comment_notification(comment, user)
+    @comment = comment
     @user = user
 
     mail to: user.email,
