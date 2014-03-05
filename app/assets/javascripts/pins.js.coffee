@@ -10,5 +10,5 @@ $ ->
       
 jQuery ->
 	$(window).scroll ->
-		mail	if $(window).scrollTop() > $(document).height() - $(window).height() - 50
+		if $(window).scrollTop() > $(document).height() - $(window).height() - 50
       $.getScript($('.pagination .next_page').attr('href'))
