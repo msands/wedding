@@ -3,12 +3,16 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $('#pins').imagesLoaded ->
-    $('#pins').masonry
-      itemSelector: '.box'
-      isFitWidth: true
-      
+	$('#pins').imagesLoaded ->
+		$('#pins').masonry
+			itemSelector: '.box'
+			isFitWidth: true
+			
 jQuery ->
-	$(window).scroll ->
-		if $(window).scrollTop() > $(document).height() - $(window).height() - 50
-      $.getScript($('.pagination .next_page').attr('href'))
+	if $('.pagination').length
+		$(window).scroll ->
+			url = $('.pagination .next_page').attr('href')
+			if url && $(window).scrollTop() > $(document).height() - $(window).height() - 50
+				$('.pagination').text('Getting more pins...')
+				$.getScript(url)
+	$(window).scroll()
