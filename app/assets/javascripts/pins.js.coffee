@@ -11,6 +11,6 @@ $ ->
     $(window).scroll ->
       url = $("a[rel='next']").attr('href')
       if url && $(window).scrollTop() > $(document).height() - $(window).height() - 50
-        $('.pagination').html('<%= image_tag("http://i.imgur.com/6RMhx.gif") %>')
+        $('.pagination').html('<img src="http://i.imgur.com/6RMhx.gif" alt="loading..." />')
         $.getScript(url)
   $(window).scroll()
