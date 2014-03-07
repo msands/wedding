@@ -1,7 +1,7 @@
 newElems = $('<%= j render(@pins) %>');
 $('#pins').append(newElems).masonry('appended', newElems);
 <% if @pins.next_page %>
-$('.pagination').replaceWith('<%= j will_paginate(@pins) %>');
+  $('.pagination').replaceWith('<%= j will_paginate(@pins) %>');
 <% else %>
-$('.pagination').remove();
+  $('.pagination').remove();
 <% end %>
