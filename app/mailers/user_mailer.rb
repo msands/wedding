@@ -19,7 +19,7 @@ class UserMailer < ActionMailer::Base
     @comment = comment
     @user = user
 
-    mail to: user.email,
+    mail to: @commentable.user.email,
       subject: "Someone has commented on your pin"
   end
 end

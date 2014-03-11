@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
-      UserMailer.comment_notification(@user).deliver
+      UserMailer.comment_notification(@comment, @user).deliver
       redirect_to @commentable, notice: "Comment posted."
     else
       render :new
