@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "rsvp@marcelandkim.com"
+  default from: "alerts@marcelandkim.com"
 
   def rsvp_confirmation(rsvp)
     @rsvp = rsvp
