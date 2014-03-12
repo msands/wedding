@@ -20,6 +20,6 @@ class UserMailer < ActionMailer::Base
     @pin = user
 
     mail to: user.email,
-      subject: "Someone has commented on your pin"
+      subject: "New Comment"
   end
 end
