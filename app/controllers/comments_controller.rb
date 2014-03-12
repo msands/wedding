@@ -2,22 +2,22 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
-    @commentable = Pin.find(params[:pin_id])
-    @comments = @commentable.comments
+    @pin = Pin.find(params[:pin_id])
+    @comments = @pin.comments
   end
 
   def new
-    @commentable = Pin.find(params[:pin_id])
-    @comment = @commentable.comments.new
+    @pin = Pin.find(params[:pin_id])
+    @comment = @pin.comments.new
   end
   
   def create
-    @commentable = Pin.find(params[:pin_id])
-    @comment = @commentable.comments.new(comment_params)
+    @pin = Pin.find(params[:pin_id])
+    @comment = @pin.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
-      UserMailer.comment_notification(@comment, @user).deliver
-      redirect_to @commentable, notice: "Comment posted."
+      UserMailer.comment_notification(@comment, @pin.user).deliver
+      redirect_to @pin, notice: "Comment posted."
     else
       render :new
     end

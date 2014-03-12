@@ -17,9 +17,9 @@ class UserMailer < ActionMailer::Base
 
   def comment_notification(comment, user)
     @comment = comment
-    @user = user
+    @pin = user
 
-    mail to: @commentable.user.email,
+    mail to: user.email,
       subject: "Someone has commented on your pin"
   end
 end
